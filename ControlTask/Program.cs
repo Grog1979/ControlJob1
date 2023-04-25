@@ -31,8 +31,7 @@ string[] arrayFirst = Console.ReadLine().Split(" ").ToArray();
 Console.WriteLine($"Первый массив: [{string.Join(", ", arrayFirst.Select(x => '"' + x + '"'))}]");
 Console.WriteLine("Введите максимальную длинну элемента массива");
 int maxElem = Convert.ToInt32(Console.ReadLine());
-int size = Count(arrayFirst, maxElem);
-string[] arraySecond = new string[size];
+string[] arraySecond = new string[Count(arrayFirst, maxElem)];
 FillArray(arrayFirst, arraySecond, maxElem);
 Console.WriteLine($"Второй массив: [{string.Join(", ", arraySecond.Select(x => '"' + x + '"'))}]");
 
